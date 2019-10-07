@@ -1,4 +1,5 @@
 #!/bin/sh
+set -ue
 
 for F in ./files/* ./files/.[^.]*; do
     FULLF=$(readlink -f $F)
@@ -8,3 +9,5 @@ for F in ./files/* ./files/.[^.]*; do
         echo "Ignore $FULLF"
     fi
 done
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
