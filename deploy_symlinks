@@ -1,9 +1,10 @@
 #!/bin/sh
 
 for F in ./files/* ./files/.[^.]*; do
-    if [ -f $F ]; then
-        echo $F
+    FULLF=$(readlink -f $F)
+    if [ -f $F -o -d $F ]; then
+        ln -vsfn -t $HOME $FULLF
     else
-        echo "directory $F"
+        echo "Ignore $FULLF"
     fi
 done
