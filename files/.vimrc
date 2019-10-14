@@ -8,6 +8,8 @@ set nocompatible
 " Load plugin bundles, all hail Tim Pope
 exec pathogen#infect()
 
+set tw=80
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
