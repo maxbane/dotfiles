@@ -63,6 +63,16 @@ setopt share_history extended_history hist_ignore_dups auto_cd multios
 export EDITOR='vim'
 # apply dircolors (solarized)
 eval `dircolors ~/.dircolors`
+
+# To save every command before it is executed (this is different from bash's
+# history -a solution):
+setopt inc_append_history
+
+# To read the history file everytime history is called upon as well as the
+# functionality from inc_append_history:
+setopt share_history
+
+
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
