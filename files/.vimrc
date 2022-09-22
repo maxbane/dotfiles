@@ -49,7 +49,7 @@ map <c-w><c-t> :NERDTreeToggle<CR>
 set bg=dark
 "let g:solarized_termcolors=256
 "let g:solarized_contrast="high"
-colorscheme solarized
+colorscheme elflord
 syntax on
 set exrc
 set secure
