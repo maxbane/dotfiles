@@ -10,3 +10,4 @@ fi
 
 # User specific aliases and functions
 set -o vi
+
