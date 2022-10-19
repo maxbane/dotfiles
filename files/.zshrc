@@ -86,3 +86,5 @@ setopt share_history
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+. "/home/max/.acme.sh/acme.sh.env"
+
