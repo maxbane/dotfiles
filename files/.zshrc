@@ -72,6 +72,12 @@ setopt inc_append_history
 # functionality from inc_append_history:
 setopt share_history
 
+# Set up ssh agent
+if [ -f $HOME/.ssh/id_rsa ]; then
+    eval $(ssh-agent)
+    ssh-add $HOME/.ssh/id_rsa
+fi
+
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
