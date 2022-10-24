@@ -11,5 +11,18 @@ return {
         top = 2,
         bottom = 2,
     },
-    window_decorations = "RESIZE",
+    visual_bell = {
+        fade_in_function = 'EaseIn',
+        fade_in_duration_ms = 60,
+        fade_out_function = 'EaseOut',
+        fade_out_duration_ms = 60,
+    },
+    colors = {
+        -- dracula purple
+        -- visual_bell = "#bd93f9",
+        -- dracula selection
+        visual_bell = "#44475a",
+    },
+    audible_bell = "Disabled",
+    -- window_decorations = "RESIZE",
 }
