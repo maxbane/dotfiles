@@ -13,6 +13,9 @@ done
 mkdir -p "$HOME/.config"
 ln -vsfn -t "$HOME/.config" "$(readlink -f .config/starship.toml)"
 
+mkdir -p "$HOME/bin"
+which starship || ln -vsfn -t "$HOME/bin" "$(readlink -f bin/starship)"
+
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 fi
