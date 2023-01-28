@@ -1,13 +1,18 @@
 #!/bin/sh
 set -ue
 
-for F in ./files/* ./files/.[^.]*; do
+for F in ./home/* ./home/.[^.]*; do
     FULLF=$(readlink -f $F)
     if [ -f $F -o -d $F ]; then
-        ln -vsfn -t $HOME $FULLF
+        ln -vsfn -t "$HOME" "$FULLF"
     else
         echo "Ignore $FULLF"
     fi
 done
 
-git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+mkdir -p "$HOME/.config"
+ln -vsfn -t "$HOME/.config" "$(readlink -f .config/starship.toml)"
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+fi
