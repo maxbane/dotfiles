@@ -6,7 +6,7 @@ ssh_only = false
 
 [username]
 format = '[$user]($style) on '
-show_always = false
+show_always = true
 
 [git_commit]
 tag_disabled = false
