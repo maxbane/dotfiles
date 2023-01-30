@@ -1,6 +1,13 @@
 [time]
 disabled = false
 
+[hostname]
+ssh_only = false
+
+[username]
+format = '[$user]($style) on '
+show_always = false
+
 [aws]
 symbol = "  "
 
