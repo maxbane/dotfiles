@@ -93,3 +93,8 @@ fi
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 eval "$(starship init zsh)"
+
+function set_win_title() {
+    echo -ne "\033]0; $(hostname):$(basename "$PWD") \007"
+}
+precmd_functions+=(set_win_title)

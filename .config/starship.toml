@@ -8,6 +8,13 @@ ssh_only = false
 format = '[$user]($style) on '
 show_always = false
 
+[git_commit]
+tag_disabled = false
+tag_symbol = ' 🏷️ '
+
+[sudo]
+disabled = false
+
 [aws]
 symbol = "  "
 
